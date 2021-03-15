@@ -1,6 +1,7 @@
-import './App.css';
-import Home from './google_pages/Home';
-import  { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import "./App.css";
+import Home from "./google_pages/Home";
+import SearchPage from "./google_pages/SearchPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/search">
-            <h1>Hey man im here</h1>
+            <SearchPage />
           </Route>
           <Route path="/">
             <Home />

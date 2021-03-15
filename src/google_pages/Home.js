@@ -19,7 +19,7 @@ function Home() {
             <div className="body">
                 <img src="https://www.google.co.in/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt=""/>
                 <div className="search_input">
-                    <Search hideButtons/>
+                    <Search />
                 </div>
             </div>
         </div>
