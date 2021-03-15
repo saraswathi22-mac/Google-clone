@@ -1,4 +1,4 @@
-# Google_clone
+# Google Clone
 
 Added the UI for Google clone
 
