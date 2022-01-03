@@ -1,4 +1,3 @@
-import "./App.css";
 import Home from "./google_pages/Home";
 import SearchPage from "./google_pages/SearchPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
