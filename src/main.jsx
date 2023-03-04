@@ -1,15 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
+import ReactDOM from "react-dom/client";
 import App from "./App";
-import reducer, {initialState} from "./google_pages/reducer";
+import "./index.css";
+import reducer, { initialState } from "./google_pages/reducer";
 import { StateProvider } from "./google_pages/StateProvider";
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer}>
       <App />
     </StateProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
