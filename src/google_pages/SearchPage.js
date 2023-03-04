@@ -4,12 +4,12 @@ import Search from "./Search";
 import "./SearchPage.css";
 import { useStateValue } from "./StateProvider";
 import useGoogleSearch from "./useGoogleSearch";
-import SearchIcon from "@material-ui/icons/Search";
-import DescriptionIcon from "@material-ui/icons/Description";
-import ImageIcon from "@material-ui/icons/Image";
-import LocalOfferIcon from "@material-ui/icons/LocalOffer";
-import RoomIcon from "@material-ui/icons/Room";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+import SearchIcon from "@mui/icons-material/Search";
+import DescriptionIcon from "@mui/icons-material/Description";
+import ImageIcon from "@mui/icons-material/Image";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import RoomIcon from "@mui/icons-material/Room";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
