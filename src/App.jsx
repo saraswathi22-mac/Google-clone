@@ -1,5 +1,5 @@
-import Home from "./google_pages/Home";
-import SearchPage from "./google_pages/SearchPage";
+import Home from "./pages/Home/Home";
+import SearchPage from "./pages/SearchPage/SearchPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {

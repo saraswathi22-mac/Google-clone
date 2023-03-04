@@ -4,8 +4,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useStateValue } from "./StateProvider";
-import { actionTypes } from "./reducer";
+import { useStateValue } from "../../context/StateProvider";
+import { actionTypes } from "../../reducer/reducer";
 
 function Search({ hideButtons = false }) {
   const [{}, dispatch] = useStateValue();
