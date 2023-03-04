@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import reducer, {initialState} from "./google_pages/reducer";
 import { StateProvider } from "./google_pages/StateProvider";
 
@@ -14,5 +13,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-reportWebVitals();
