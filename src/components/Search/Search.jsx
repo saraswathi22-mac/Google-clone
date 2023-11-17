@@ -26,31 +26,13 @@ function Search({ hideButtons = false }) {
     <form className="search">
       <div className="search_data">
         <SearchIcon className="inputIcon" />
-        <input value={input} onChange={(e) => setInput(e.target.value)} />
+        <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Search Google or type a URL" />
         <MicIcon />
       </div>
-      {!hideButtons ? (
-        <div className="buttons">
-          <Button type="submit" onClick={search} variant="outlined">
-            Google Search
-          </Button>
-          <Button variant="outlined">I'm Feeling Lucky</Button>
-        </div>
-      ) : (
-        <div className="buttons">
-          <Button
-            className="buttonsHidden"
-            type="submit"
-            onClick={search}
-            variant="outlined"
-          >
-            Google Search
-          </Button>
-          <Button className="buttonsHidden" variant="outlined">
-            I'm Feeling Lucky
-          </Button>
-        </div>
-      )}
+      <div className="buttons shortcuts">
+        <Button variant="outlined" onClick={search}>Add Shortcuts</Button>  
+        {/* className="buttonsHidden" */}
+      </div>
     </form>
   );
 }
