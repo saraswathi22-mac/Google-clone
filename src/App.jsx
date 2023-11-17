@@ -7,8 +7,8 @@ function App() {
     <div className="clone">
       <Router>
         <Routes>
-          <Route path="/search" element={<SearchPage />} />
           <Route path="/" element={<Home />} />
+          <Route path="/search" element={<SearchPage />} />
         </Routes>
       </Router>
     </div>
