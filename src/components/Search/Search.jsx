@@ -6,15 +6,15 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../../context/StateProvider";
 import { actionTypes } from "../../reducer/reducer";
+import AddIcon from "@mui/icons-material/Add";
 
 function Search({ hideButtons }) {
-  const [{}, dispatch] = useStateValue();
+  const [{ term }, dispatch] = useStateValue();
   const [input, setInput] = useState("");
   const navigate = useNavigate();
 
   const search = (e) => {
     e.preventDefault();
-    console.log("You did it man >>", input);
     dispatch({
       type: actionTypes.SET_SEARCH_TERM,
       term: input,
@@ -31,7 +31,10 @@ function Search({ hideButtons }) {
       </div>
       {!hideButtons ? (
         <div className="buttons shortcuts">
-          <Button variant="outlined">Add Shortcuts</Button>
+          <Button variant="outlined">
+            <AddIcon className="addIcon" />
+            <div className="addShortcuts">Add Shortcuts</div>
+          </Button>
         </div>
       ) : (
         <Button variant="outlined" className="buttonsHidden">
