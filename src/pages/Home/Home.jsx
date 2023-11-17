@@ -10,8 +10,8 @@ function Home() {
       <div className="header">
         <div></div>
         <div className="right">
-          <Link to="/gmail">Gmail</Link>
-          <Link to="/images">Images</Link>
+          <Link to="/">Gmail</Link>
+          <Link to="/">Images</Link>
           <AppsIcon />
           <Avatar />
         </div>
