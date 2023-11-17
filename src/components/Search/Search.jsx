@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../../context/StateProvider";
 import { actionTypes } from "../../reducer/reducer";
 
-function Search({ hideButtons = false }) {
+function Search({ hideButtons }) {
   const [{}, dispatch] = useStateValue();
   const [input, setInput] = useState("");
   const navigate = useNavigate();
@@ -23,16 +23,21 @@ function Search({ hideButtons = false }) {
   };
 
   return (
-    <form className="search">
+    <form className="search" onSubmit={search}>
       <div className="search_data">
         <SearchIcon className="inputIcon" />
-        <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Search Google or type a URL" />
+        <input value={input} onChange={(e) => setInput(e.target.value)} />
         <MicIcon />
       </div>
-      <div className="buttons shortcuts">
-        <Button variant="outlined" onClick={search}>Add Shortcuts</Button>  
-        {/* className="buttonsHidden" */}
-      </div>
+      {!hideButtons ? (
+        <div className="buttons shortcuts">
+          <Button variant="outlined">Add Shortcuts</Button>
+        </div>
+      ) : (
+        <Button variant="outlined" className="buttonsHidden">
+          Add Shortcuts
+        </Button>
+      )}
     </form>
   );
 }

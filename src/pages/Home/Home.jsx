@@ -22,7 +22,7 @@ function Home() {
           alt=""
         />
         <div className="search_input">
-          <Search />
+          <Search hideButtons={false} />
         </div>
       </div>
     </div>

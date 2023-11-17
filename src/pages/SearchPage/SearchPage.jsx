@@ -26,7 +26,7 @@ function SearchPage() {
           />
         </Link>
         <div className="sP_headerBody">
-          <Search hideButtons />
+          <Search hideButtons={true} />
           <div className="sP_options">
             <div className="sP_optionsLeft">
               <div className="sP_option">
