@@ -72,7 +72,7 @@ function SearchPage() {
             {data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
           {data?.items.map((item) => (
-            <div className="result">
+            <div className="result" key={item.title}>
               <a href={item.link}>
                 {item.pagemap?.cse_image?.length > 0 &&
                   item.pagemap?.cse_image[0]?.src && (
