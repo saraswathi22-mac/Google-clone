@@ -26,7 +26,7 @@ function SearchPage() {
           />
         </Link>
         <div className="sP_headerBody">
-          <Search hideButtons={true} />
+          <Search hideButtons={true} inputValue={term} />
           <div className="sP_options">
             <div className="sP_optionsLeft">
               <div className="sP_option">
@@ -72,7 +72,7 @@ function SearchPage() {
             {data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
           {data?.items.map((item) => (
-            <div className="result" key={item.title}>
+            <div className="result" key={item.link}>
               <a href={item.link}>
                 {item.pagemap?.cse_image?.length > 0 &&
                   item.pagemap?.cse_image[0]?.src && (

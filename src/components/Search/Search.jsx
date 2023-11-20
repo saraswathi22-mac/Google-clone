@@ -8,16 +8,17 @@ import { useStateValue } from "../../context/StateProvider";
 import { actionTypes } from "../../reducer/reducer";
 import AddIcon from "@mui/icons-material/Add";
 
-function Search({ hideButtons }) {
+function Search({ hideButtons, inputValue }) {
   const [{ term }, dispatch] = useStateValue();
   const [input, setInput] = useState("");
+  const [termInput, setTermInput] = useState(inputValue);
   const navigate = useNavigate();
 
   const search = (e) => {
     e.preventDefault();
     dispatch({
       type: actionTypes.SET_SEARCH_TERM,
-      term: input,
+      term: !inputValue ? input : termInput,
     });
     navigate("/search");
   };
@@ -26,7 +27,14 @@ function Search({ hideButtons }) {
     <form className="search" onSubmit={search}>
       <div className="search_data">
         <SearchIcon className="inputIcon" />
-        <input value={input} onChange={(e) => setInput(e.target.value)} />
+        {!inputValue ? (
+          <input value={input} onChange={(e) => setInput(e.target.value)} />
+        ) : (
+          <input
+            value={termInput}
+            onChange={(e) => setTermInput(e.target.value)}
+          />
+        )}
         <MicIcon />
       </div>
       {!hideButtons ? (
