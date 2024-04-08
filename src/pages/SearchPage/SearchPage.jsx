@@ -73,7 +73,8 @@ function SearchPage() {
                       alt=""
                     />
                   )}
-                {item.displayLink}
+
+                {item.link}
               </a>
               <a className="resultTitle" href={item.link}>
                 <h2>{item.title}</h2>
