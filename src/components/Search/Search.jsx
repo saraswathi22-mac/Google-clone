@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Search.css";
-import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +25,6 @@ function Search({ hideButtons, inputValue }) {
   return (
     <form className="search" onSubmit={search}>
       <div className="search_data">
-        <SearchIcon className="inputIcon" />
         {!inputValue ? (
           <input value={input} onChange={(e) => setInput(e.target.value)} />
         ) : (

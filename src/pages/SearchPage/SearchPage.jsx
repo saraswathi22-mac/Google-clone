@@ -4,11 +4,6 @@ import Search from "../../components/Search/Search";
 import "./SearchPage.css";
 import { useStateValue } from "../../context/StateProvider";
 import useGoogleSearch from "../../services/useGoogleSearch";
-import SearchIcon from "@mui/icons-material/Search";
-import DescriptionIcon from "@mui/icons-material/Description";
-import ImageIcon from "@mui/icons-material/Image";
-import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-import RoomIcon from "@mui/icons-material/Room";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 function SearchPage() {
@@ -30,24 +25,19 @@ function SearchPage() {
           <div className="sP_options">
             <div className="sP_optionsLeft">
               <div className="sP_option">
-                <SearchIcon />
                 <Link to="/all">All</Link>
               </div>
               <div className="sP_option">
-                <DescriptionIcon />
-                <Link to="/news">News</Link>
-              </div>
-              <div className="sP_option">
-                <ImageIcon />
                 <Link to="/images">Images</Link>
               </div>
               <div className="sP_option">
-                <LocalOfferIcon />
                 <Link to="/shopping">Shopping</Link>
               </div>
               <div className="sP_option">
-                <RoomIcon />
-                <Link to="/maps">Maps</Link>
+                <Link to="/maps">Videos</Link>
+              </div>
+              <div className="sP_option">
+                <Link to="/news">News</Link>
               </div>
               <div className="sP_option">
                 <MoreVertIcon />
@@ -56,15 +46,13 @@ function SearchPage() {
             </div>
             <div className="sP_optionsRight">
               <div className="sP_option">
-                <Link to="/settings">Settings</Link>
-              </div>
-              <div className="sP_option">
                 <Link to="/tools">Tools</Link>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       {term && (
         <div className="results">
           <p className="resultsCount">

@@ -11,8 +11,12 @@
 
 .sP_logo {
   object-fit: contain;
-  height: 50px;
-  margin-right: 50px;
+  height: 30px;
+  margin: 5px 15px;
+}
+
+.sP_headerBody > .search {
+  margin-left: 30px;
 }
 
 .sP_headerBody > .search > .search_data {
@@ -26,12 +30,14 @@
   display: flex;
   align-items: center;
   color: grey;
+  padding-top: 1rem;
+  height: 20px
 }
 
 .sP_optionsRight a,
 .sP_options a {
   text-decoration: none;
-  color: gray;
+  color: #70757a;
 }
 
 .sP_optionsLeft,
@@ -57,7 +63,7 @@
 }
 
 .resultsCount {
-  color: #70757a;
+  color: #5e5e5e;
   font-size: 14px;
 }
 

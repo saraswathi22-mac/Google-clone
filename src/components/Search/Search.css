@@ -1,66 +1,67 @@
 .search_data {
-    display: flex;
-    align-items: center;
-    border: 1px solid lightgray;
-    height: 30px;
-    padding: 10px 20px;
-    border-radius: 999px;
-    width: 75vw;
-    margin: 0 auto;
-    margin-top: 40px;
-    max-width: 560px;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+  padding: 10px 20px;
+  border-radius: 24px;
+  width: 75vw;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 560px;
+}
+
+.search_data:hover {
+  background: #fff;
+  box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
+  border-color: transparent;
 }
 
 .search_data > input {
-    flex: 1;
-    padding: 10px 20px;
-    font-size: medium;
-    border: none;
+  flex: 1;
+  font-size: medium;
+  border: none;
 }
 
-.search_data > input:focus{
-    outline-width: 0;
-}
-
-.inputIcon{
-    color: gray;
+.search_data > input:focus {
+  outline-width: 0;
 }
 
 .buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-.buttons button{
-    margin: 5px;
-    padding: 15px;
-    background-color: #f8f8f8;
-    border: 1px solid white;
-    text-transform: inherit;
-    color: #5f6368;
-    display: block;
-    font-size: 0.75rem;
+.buttons button {
+  margin: 5px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border: 1px solid white;
+  text-transform: inherit;
+  color: #5f6368;
+  display: block;
+  font-size: 0.75rem;
 }
 
-.buttons button:hover{
-    background-color: #5f6368;
-    border: 1px solid #c6c6c6;
-    color: white;
+.buttons button:hover {
+  background-color: #5f6368;
+  border: 1px solid #c6c6c6;
+  color: white;
 }
 
-.buttonsHidden{
-    display: none !important;
+.buttonsHidden {
+  display: none !important;
 }
 
 .buttons .addIcon {
-    border: 1px solid c6c6c6;
-    border-radius: 50%;
-    padding: 10px;
-    color: black;
-    background-color: #c6c6c6;
+  border: 1px solid c6c6c6;
+  border-radius: 50%;
+  padding: 10px;
+  color: black;
+  background-color: #c6c6c6;
 }
 
 .buttons .addShortcuts {
-    padding-top: 10px;
+  padding-top: 10px;
 }
