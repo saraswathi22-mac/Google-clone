@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Search from "../../components/Search/Search";
 import "./SearchPage.css";
 import { useStateValue } from "../../context/StateProvider";
 import useGoogleSearch from "../../services/useGoogleSearch";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import Dropdown from "../../components/DropDown/Dropdown";
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
   const { data } = useGoogleSearch(term);
+  const [show, setShow] = useState(false);
 
   return (
     <div className="searchPage">
@@ -25,7 +27,9 @@ function SearchPage() {
           <div className="sP_options">
             <div className="sP_optionsLeft">
               <div className="sP_option">
-                <Link to="/all">All</Link>
+                <Link to="/search" className="active">
+                  All
+                </Link>
               </div>
               <div className="sP_option">
                 <Link to="/images">Images</Link>
@@ -39,9 +43,15 @@ function SearchPage() {
               <div className="sP_option">
                 <Link to="/news">News</Link>
               </div>
-              <div className="sP_option">
-                <MoreVertIcon />
-                <Link to="/more">More</Link>
+              <div className="sP_option_dropdown">
+                <button
+                  onClick={() => setShow(!show)}
+                  className="sP_option_dropdown_btn"
+                >
+                  <MoreVertIcon className="moreVertIcon" />
+                  <div>More</div>
+                </button>
+                {show ? <Dropdown show={show} /> : " "}
               </div>
             </div>
             <div className="sP_optionsRight">

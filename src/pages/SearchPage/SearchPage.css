@@ -31,7 +31,7 @@
   align-items: center;
   color: grey;
   padding-top: 2rem;
-  height: 20px
+  height: 20px;
 }
 
 .sP_optionsRight a,
@@ -55,9 +55,16 @@
   margin-left: 20px;
 }
 
+.sP_option_dropdown {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+}
+
 .results {
   max-width: 650px;
-      margin: 20px 200px 100px;
+  margin: 20px 200px 100px;
 }
 
 .resultsCount {
@@ -89,4 +96,20 @@
 
 .resultSnippet {
   margin-top: 10px;
+}
+
+.sP_option_dropdown_btn {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: #70757a;
+}
+
+.moreVertIcon {
+  margin: -4px;
+}
+
+.sP_option_dropdown_btn > div {
+  display: inline-block;
 }
