@@ -8,7 +8,7 @@ import { actionTypes } from "../../reducer/reducer";
 import AddIcon from "@mui/icons-material/Add";
 
 function Search({ hideButtons, inputValue }) {
-  const [{ term }, dispatch] = useStateValue();
+  const {term, dispatch} = useStateValue();
   const [input, setInput] = useState("");
   const [termInput, setTermInput] = useState(inputValue);
   const navigate = useNavigate();
